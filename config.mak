@@ -5,13 +5,11 @@ ARCH = x86_64
 SUBARCH =
 ASMSUBARCH =
 srcdir = .
-prefix = sysroot
 exec_prefix = $(prefix)
 bindir = $(exec_prefix)/bin
 libdir = $(prefix)/lib
 includedir = $(prefix)/include
 syslibdir = sysroot/syslib
-CC = /Users/peachg/Projects/wasmception2//dist/bin/clang --target=wasm32-unknown-unknown-wasm
 CFLAGS =
 CFLAGS_AUTO = -Wno-unknown-pragmas -Wno-string-plus-int -Wno-parentheses -Wno-shift-op-parentheses -Wno-bitwise-op-parentheses -Wno-logical-op-parentheses -Werror -Wno-ignored-attributes -Wno-dangling-else -fno-stack-protector -pipe -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith -Qunused-arguments
 CFLAGS_C99FSE = -std=c99 -nostdinc -ffreestanding -Wa,--noexecstack
@@ -20,7 +18,6 @@ CFLAGS_NOSSP = -fno-stack-protector
 CPPFLAGS =
 LDFLAGS =
 LDFLAGS_AUTO =
-CROSS_COMPILE = /Users/peachg/Projects/wasmception2/dist/bin/llvm-
 LIBCC =
 OPTIMIZE_GLOBS = */*.c
 ALL_TOOLS =
