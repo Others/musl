@@ -2,6 +2,8 @@
 #include <threads.h>
 #include "libc.h"
 
+struct pthread pthred_self_thread;
+
 static pthread_t __pthread_self_internal()
 {
 	return __pthread_self();

@@ -1,8 +1,9 @@
+// We assume we're single threaded
+extern struct pthread pthred_self_thread;
+
 static inline struct pthread *__pthread_self()
 {
-	struct pthread *self;
-	__asm__ __volatile__ ("mov %%fs:0,%0" : "=r" (self) );
-	return self;
+	return &pthred_self_thread;
 }
 
 #define TP_ADJ(p) (p)
