@@ -167,7 +167,8 @@ lib/libc.a: $(AOBJS)
 
 $(EMPTY_LIBS):
 	rm -f $@
-	$(AR) rc $@
+	# $(AR) rc $@
+	echo '!<arch>' > $@
 
 lib/%.o: obj/crt/$(ARCH)/%.o
 	cp $< $@
