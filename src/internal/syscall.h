@@ -22,7 +22,7 @@ typedef long syscall_arg_t;
 #endif
 
 __attribute__((visibility("hidden")))
-long __syscall_ret(unsigned long), __syscall(syscall_arg_t, ...),
+long __syscall_ret(unsigned long), __syscall(syscall_arg_t, syscall_arg_t, syscall_arg_t, syscall_arg_t, syscall_arg_t, syscall_arg_t, syscall_arg_t),
 	__syscall_cp(syscall_arg_t, syscall_arg_t, syscall_arg_t, syscall_arg_t,
 	             syscall_arg_t, syscall_arg_t, syscall_arg_t);
 
